@@ -23,13 +23,14 @@
 //
 // Grayscale and brand colors for use across Bootstrap.
 
-$gray-dark:                 #bf0267;
+$gray-dark:                 #c5026a;
 $gray:                      #d80275;
 $gray-light:                #f10283;
 $gray-lighter:              #fd108f;
 $gray-lightest:             #fd299b;
 
 $brand-primary:             #d80275;
+$brand-primary-plus:        darken($brand-primary, 15%);
 $brand-success:             #d86502;
 $brand-info:                #fd108f;
 $brand-warning:             #f0ad4e;
@@ -59,8 +60,9 @@ $border-width: 1px;
 //
 // Settings for the `<body>` element.
 
-$body-bg:    #d80275;
-$body-color: $gray-dark;
+$body-bg:    #fff;
+$body-color: $gray;
+$h1-color: $gray-lightest;
 
 
 // Links
@@ -138,4 +140,4 @@ $navbar-light-disabled-color:       rgba(0,0,0,.15);
 // Jumbotron
 
 $jumbotron-padding:              2rem;
-$jumbotron-bg:                   $gray-lighter;
+$jumbotron-bg:                   $gray-lightest;
