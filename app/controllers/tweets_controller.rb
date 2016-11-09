@@ -1,5 +1,8 @@
 class TweetsController < ApplicationController
 
+  #from devise, require auth except for main list and detail
+  before_action :authenticate_user!, except: [:index, :show]
+
   # GET /tweets
   def index
     @tweets = Tweet.all
