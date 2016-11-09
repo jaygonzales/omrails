@@ -11,27 +11,30 @@
     </div>
   <% end %>
 
-  <div class="field">
+# should text_area be changed to text_field, or not due to data type
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_area :title, class: "form-control" %> 
   </div>
 
-  <div class="field">
+
+  <div class="form-group">
     <%= f.label :content %>
-    <%= f.text_area :content %>
+    <%= f.text_area :content, class: "form-control" %> 
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :value %>
-    <%= f.number_field :value %>
+    <%= f.number_field :value, class: "form-control" %> 
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :effort %>
-    <%= f.number_field :effort %>
+    <%= f.number_field :effort, class: "form-control" %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= f.submit 'Submit', class: "btn btn-primary"%>
+
 <% end %>
+
+

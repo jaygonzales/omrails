@@ -1,24 +1,34 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @idea.title %>
-</p>
+<div class="container">
+	<p>
+		<strong>User:</strong>
+		<%= @idea.user %>
+	</p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @idea.content %>
-</p>
+	<p>
+	  <strong>Title:</strong>
+	  <%= @idea.title %>
+	</p>
 
-<p>
-  <strong>Value:</strong>
-  <%= @idea.value %>
-</p>
+	<p>
+	  <strong>Content:</strong>
+	  <%= @idea.content %>
+	</p>
 
-<p>
-  <strong>Effort:</strong>
-  <%= @idea.effort %>
-</p>
+	<p>
+	  <strong>Value:</strong>
+	  <%= @idea.value %>
+	</p>
 
-<%= link_to 'Edit', edit_idea_path(@idea) %> |
-<%= link_to 'Back', ideas_path %>
+	<p>
+	  <strong>Effort:</strong>
+	  <%= @idea.effort %>
+	</p>
+
+	<% if @idea.user == current_user %>
+		<%= link_to 'Edit', edit_idea_path(@idea) %> |
+	<% end %>
+		<%= link_to 'Back', ideas_path %>
+
+</div>
